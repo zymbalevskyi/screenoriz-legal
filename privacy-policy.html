@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — ScreenoRiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:        #F6F4EF;
+      --surface:   #EFEDE7;
+      --text:      #111111;
+      --muted:     #666560;
+      --accent:    #005BBB;
+      --accent-lt: #D6E4F5;
+      --rule:      #D8D5CD;
+      --mono:      'IBM Plex Mono', monospace;
+      --serif:     'Instrument Serif', Georgia, serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--mono);
+      font-size: 0.875rem;
+      line-height: 1.75;
+      min-height: 100vh;
+      padding: 0 1.25rem;
+      opacity: 0;
+      animation: fadein 0.6s ease 0.1s forwards;
+    }
+
+    @keyframes fadein {
+      to { opacity: 1; }
+    }
+
+    /* ── Layout ─────────────────────────────────── */
+    .wrap {
+      max-width: 660px;
+      margin: 0 auto;
+      padding: 4rem 0 6rem;
+    }
+
+    /* ── Header ─────────────────────────────────── */
+    header {
+      margin-bottom: 3.5rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 2rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-lt);
+      padding: 0.25rem 0.65rem;
+      border-radius: 2px;
+      margin-bottom: 1rem;
+    }
+
+    .badge::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 1rem;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem 1.5rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .meta span { white-space: nowrap; }
+
+    /* ── Summary block ───────────────────────────── */
+    .tldr {
+      background: var(--surface);
+      border-left: 3px solid var(--accent);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 3rem;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .tldr-label {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .tldr p {
+      font-size: 0.875rem;
+      line-height: 1.65;
+      color: var(--text);
+    }
+
+    /* ── Sections ────────────────────────────────── */
+    section {
+      margin-bottom: 2.75rem;
+      padding-bottom: 2.75rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 400;
+      font-style: italic;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    p { margin-bottom: 0.9rem; color: var(--text); }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      padding-left: 0;
+      list-style: none;
+      margin-bottom: 0.9rem;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+
+    ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--muted);
+    }
+
+    strong {
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    a:hover { text-decoration: none; }
+
+    /* ── Contact block ───────────────────────────── */
+    .contact-block {
+      background: var(--surface);
+      padding: 1.5rem;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .contact-block .label {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .contact-block a {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    /* ── Footer ─────────────────────────────────── */
+    footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .footer-app {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+    }
+
+    .footer-flag {
+      display: flex;
+      gap: 0;
+      height: 10px;
+      width: 22px;
+      border-radius: 1px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .footer-flag span {
+      display: block;
+      flex: 1;
+    }
+
+    .footer-flag .blue  { background: #005BBB; }
+    .footer-flag .gold  { background: #FFD700; }
+
+    /* ── Responsive ──────────────────────────────── */
+    @media (max-width: 480px) {
+      .wrap { padding: 2.5rem 0 4rem; }
+      h2 { font-size: 1.2rem; }
+    }
+
+    @media print {
+      body { background: #fff; animation: none; opacity: 1; }
+      .badge, footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header>
+      <div class="badge">Legal</div>
+      <h1>Privacy Policy</h1>
+      <div class="meta">
+        <span>App: ScreenoRiz</span>
+        <span>Effective: [DATE]</span>
+        <span>Last updated: [DATE]</span>
+      </div>
+    </header>
+
+    <div class="tldr">
+      <div class="tldr-label">Short version</div>
+      <p>ScreenoRiz runs entirely on your device. We do not collect, transmit, or store any personal data on any server. There is no account system, no analytics, and no third-party SDKs. Your screen time data never leaves your iPhone.</p>
+    </div>
+
+    <section>
+      <h2>Who we are</h2>
+      <p>ScreenoRiz is developed by <strong>[Yevhen Zymbalevskyi / your legal name]</strong>, based in Ukraine. Contact: <a href="mailto:[your-email@example.com]">[your-email@example.com]</a></p>
+    </section>
+
+    <section>
+      <h2>What data the app accesses</h2>
+      <p>To function, ScreenoRiz uses three Apple frameworks: <strong>Family Controls</strong>, <strong>Device Activity</strong>, and <strong>Managed Settings</strong>. These frameworks are designed by Apple to be privacy-preserving:</p>
+      <ul>
+        <li>You choose which apps and categories to monitor through Apple's system picker.</li>
+        <li>The app receives <strong>opaque tokens</strong> — not the names of the apps you selected, not your usage history, not any directly identifiable data.</li>
+        <li>Monitoring runs on your device inside a sandboxed system extension.</li>
+      </ul>
+      <p>Specifically, the app accesses and stores locally:</p>
+      <ul>
+        <li><strong>Your monitoring selections</strong> — which apps and categories you chose to track.</li>
+        <li><strong>Usage thresholds and limits</strong> you configure.</li>
+        <li><strong>Time-over-limit values</strong> calculated on your device by the Device Activity framework.</li>
+        <li><strong>Suggested donation amounts</strong> in Ukrainian hryvnia, derived locally from your overtime.</li>
+      </ul>
+      <p>The app does <strong>not</strong> access your contacts, location, microphone, camera, photos, health data, advertising identifiers, or any data outside the Family Controls scope you explicitly grant.</p>
+    </section>
+
+    <section>
+      <h2>Where data is stored</h2>
+      <p>All data is stored locally on your device in a shared App Group container (<code>group.app.zymbalevskyi.ScreenoRiz</code>) used by the main app and the monitoring extension. No data is uploaded to a remote server, because we do not operate one.</p>
+    </section>
+
+    <section>
+      <h2>How data is used</h2>
+      <p>Only to:</p>
+      <ul>
+        <li>Show your current screen time status, overtime, and suggested donation amount.</li>
+        <li>Display alerts and shield screens when you exceed your chosen limits.</li>
+        <li>Persist your settings between launches and across the app and extension.</li>
+      </ul>
+      <p>We do not use your data for advertising, profiling, or any commercial purpose.</p>
+    </section>
+
+    <section>
+      <h2>Third parties</h2>
+      <p>None. ScreenoRiz contains no third-party SDKs, analytics services, advertising networks, or crash reporters that collect personally identifying information.</p>
+      <p>Apple itself processes some technical interactions (App Store delivery, the Family Controls authorization screen). Apple's handling of that data is governed by <a href="https://www.apple.com/legal/privacy" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</p>
+    </section>
+
+    <section>
+      <h2>Donations to ZSU</h2>
+      <p>ScreenoRiz displays a suggested donation amount based on your overtime. <strong>The app does not process any payments.</strong> If you choose to donate to ZSU funds, you do so externally through your own bank, card, or chosen donation platform. We do not receive, see, facilitate, or take a commission on those payments.</p>
+    </section>
+
+    <section>
+      <h2>Children's privacy</h2>
+      <p>ScreenoRiz is intended for users aged 17 and older. The app is not directed at children, and we do not knowingly collect data from anyone under 17.</p>
+    </section>
+
+    <section>
+      <h2>Your rights</h2>
+      <p>Because the app does not collect any personal data on a server, we hold no data about you that we could access, correct, transfer, or delete on your behalf. All data lives on your device, under your control.</p>
+      <p>If you are located in the European Economic Area, the United Kingdom, or are covered by Ukraine's Law on Personal Data Protection (<em>Про захист персональних даних</em>), you retain rights to access, correct, and delete personal data. For ScreenoRiz, you exercise these rights directly on your device.</p>
+    </section>
+
+    <section>
+      <h2>How to delete your data</h2>
+      <p>Uninstall the app. All data stored by ScreenoRiz — settings, thresholds, accumulated overtime, and calculated amounts — is removed by iOS when the app is removed.</p>
+      <p>You may also reset your data at any time from within the app: <strong>Settings → Reset all data</strong>.</p>
+    </section>
+
+    <section>
+      <h2>Changes to this policy</h2>
+      <p>If we change this Privacy Policy, we will update the "Last updated" date above. Where the changes are material, we will post a notice in the app before they take effect.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <div class="contact-block">
+        <span class="label">Questions about this policy?</span>
+        <a href="mailto:[your-email@example.com]">[your-email@example.com]</a>
+      </div>
+    </section>
+
+    <footer>
+      <span class="footer-app">ScreenoRiz · Ukraine</span>
+      <div class="footer-flag" aria-label="Ukrainian flag">
+        <span class="blue"></span>
+        <span class="gold"></span>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
