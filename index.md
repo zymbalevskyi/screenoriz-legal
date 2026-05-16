@@ -20,8 +20,8 @@ ScreenoRiz runs entirely on your device. We do not collect, transmit, or store a
 
 ## Who we are
 
-ScreenoRiz is developed by [Yevhen Zymbalevskyi / your legal name], based in Ukraine.  
-Contact: [your-email@example.com]
+ScreenoRiz is developed by Yevhen Zymbalevskyi, based in Ukraine.  
+Contact: eu.zymbalevskyi@gmail.com
 
 ---
 
@@ -107,4 +107,4 @@ If we change this Privacy Policy, we will update the "Last updated" date above. 
 ## Contact
 
 Questions about this Privacy Policy?  
-Email: [your-email@example.com]
+Email: eu.zymbalevskyi@gmail.com
